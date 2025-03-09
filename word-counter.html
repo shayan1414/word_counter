@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online word counter tool with character count, reading time, and text analysis features">
+    <meta name="keywords" content="word counter, character counter, text analyzer, reading time calculator">
+    <title>Word Counter - Count Words, Characters & More</title>
+    <link rel="stylesheet" href="word-counter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="counter-container">
+        <div class="counter-card">
+            <h2><i class="fas fa-calculator"></i> Word Counter</h2>
+            
+            <div class="input-section">
+                <textarea id="text-input" placeholder="Type or paste your text here..."></textarea>
+                
+                <div class="button-group">
+                    <button id="clear-btn" class="action-btn">
+                        <i class="fas fa-eraser"></i> Clear Text
+                    </button>
+                    <button id="copy-btn" class="action-btn">
+                        <i class="fas fa-copy"></i> Copy Text
+                    </button>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-font"></i>
+                    <span class="value" id="word-count">0</span>
+                    <span class="label">Words</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-text-width"></i>
+                    <span class="value" id="char-count">0</span>
+                    <span class="label">Characters</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-text-height"></i>
+                    <span class="value" id="char-no-spaces">0</span>
+                    <span class="label">Characters (no spaces)</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-paragraph"></i>
+                    <span class="value" id="paragraph-count">0</span>
+                    <span class="label">Paragraphs</span>
+                </div>
+            </div>
+
+            <div class="text-tools">
+                <h3><i class="fas fa-magic"></i> Text Tools</h3>
+                <div class="tools-grid">
+                    <button class="tool-btn" id="uppercase">
+                        <i class="fas fa-arrow-up"></i>
+                        UPPERCASE
+                    </button>
+                    <button class="tool-btn" id="lowercase">
+                        <i class="fas fa-arrow-down"></i>
+                        lowercase
+                    </button>
+                    <button class="tool-btn" id="capitalize">
+                        <i class="fas fa-font"></i>
+                        Capitalize Words
+                    </button>
+                    <button class="tool-btn" id="sentence-case">
+                        <i class="fas fa-paragraph"></i>
+                        Sentence case
+                    </button>
+                    <button class="tool-btn" id="remove-spaces">
+                        <i class="fas fa-compress-alt"></i>
+                        Remove Extra Spaces
+                    </button>
+                    <button class="tool-btn" id="remove-lines">
+                        <i class="fas fa-minus"></i>
+                        Remove Line Breaks
+                    </button>
+                </div>
+            </div>
+
+            <div class="keyword-analysis">
+                <h3>Keyword Analysis</h3>
+                <div class="keyword-content">
+                    <div class="keyword-stats">
+                        <div id="keyword-list" class="keyword-list">
+                            <!-- Keywords will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="word-counter.js"></script>
+</body>
+</html>
